@@ -103,17 +103,17 @@ onMounted(() => {
 			<div v-if="choice === null" class="flex items-center justify-center -mx-6">
 
 				<button @click="play('plastic')"
-					class="bg-white rounded-full shadow-lg w-64 p-12 mx-6 transition-colors duration-300 hover:bg-pink-500">
+					class="bg-white rounded-full shadow-lg w-64 p-12 mx-6 transition-colors duration-300 hover:bg-blue-500">
 					<img src="./assets/plastic.svg" alt="Rock" class="w-full" />
 				</button>
 
 				<button @click="play('people')"
-					class="bg-white rounded-full shadow-lg w-64 p-12 mx-6 transition-colors duration-300 hover:bg-green-500">
+					class="bg-white rounded-full shadow-lg w-64 p-12 mx-6 transition-colors duration-300 hover:bg-yellow-500">
 					<img src="./assets/employees.svg" alt="Paper" />
 				</button>
 
 				<button @click="play('earth')"
-					class="bg-white rounded-full shadow-lg w-64 p-12 mx-6 transition-colors duration-300 hover:bg-yellow-500">
+					class="bg-white rounded-full shadow-lg w-64 p-12 mx-6 transition-colors duration-300 hover:bg-green-500">
 					<img src="./assets/worldwide.svg" alt="Scissors" />
 				</button>
 
