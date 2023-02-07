@@ -17,12 +17,12 @@ const outcomes = {
 	'plastic': {
 		'plastic': 'draw',
 		'people': 'loss',
-		'tierra': 'win'
+		'earth': 'win'
 	},
 	'people': {
 		'plastic': 'win',
 		'people': 'draw',
-		'tierra': 'loss'
+		'earth': 'loss'
 	},
 	'earth': {
 		'plastic': 'loss',
@@ -33,7 +33,7 @@ const outcomes = {
 
 const play = (c) => {
 	choice.value = c
-	
+
 	const choices = ['plastic', 'people', 'earth']
 	const random = Math.floor(Math.random() * choices.length)
 	computerChoice.value = choices[random]
@@ -42,7 +42,7 @@ const play = (c) => {
 	tipChoice.value = tipsChoices[randomTips]
 
 	const outcome = outcomes[choice.value][computerChoice.value]
-	
+
 	if (outcome === 'win') {
 		wins.value++
 		verdict.value = 'You win!'
@@ -91,6 +91,7 @@ onMounted(() => {
 		}
 	})
 })
+
 </script>
 
 <template>
@@ -138,16 +139,54 @@ onMounted(() => {
 			<div class="text-lg">Win rate: {{ Math.round(winPercentage) }}%</div>
 			<br>
 			<div class="text-lg"><b>{{ tipChoice }}</b></div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<table>
+				<tr>
+					<th></th>
+					<th>Earth</th>
+					<th>Plastic</th>
+					<th>People</th>
+				</tr>
+				<tr>
+					<th>Earth</th>
+					<td>draw</td>
+					<td>loss</td>
+					<td>win</td>
+				</tr>
+				<tr>
+					<th>Plastic</th>
+					<td>win</td>
+					<td>draw</td>
+					<td>loss</td>
+				</tr>
+				<tr>
+					<th>Peoples</th>
+					<td>loss</td>
+					<td>win</td>
+					<td>draw</td>
+					
+				</tr>
+			</table>
 		</main>
 
 		<footer class="container mx-auto p-6">
 			<a href="https://www.vecteezy.com/free-vector/rock-paper-scissors-game">Rock Paper Scissors Game Vectors by
 				Vecteezy</a>
 
-				<p> Diana Cuenca Adaptation</p>
-				<p>Recycling tips from:<a href="https://www.recyclingbins.co.uk/recycling-tips/"> https://www.recyclingbins.co.uk/recycling-tips/</a> </p>
+			<p> Diana Cuenca Adaptation</p>
+			<p>Recycling tips from -><a href="https://www.recyclingbins.co.uk/recycling-tips/">
+					https://www.recyclingbins.co.uk/recycling-tips/</a> </p>
 		</footer>
 	</div>
 </template>
 
-<style></style>
+<style>
+table, th, td {
+  border: 1px solid;
+  align-content: center;
+  align-items: center;
+}
+</style>
