@@ -141,8 +141,6 @@ onMounted(() => {
 			<div class="text-lg"><b>{{ tipChoice }}</b></div>
 			<br>
 			<br>
-			<br>
-			<br>
 			<table>
 				<tr>
 					<th></th>
