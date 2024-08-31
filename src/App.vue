@@ -92,15 +92,17 @@ onMounted(() => {
 	})
 })
 
+const iframeUrl = ref('https://cdn.respond.io/webchat/widget/widget.js?cId=e55c86dc87aaf85c9db67e32f926c3f')
+	
 </script>
+
+<script id="respondio__widget" src="https://cdn.respond.io/webchat/widget/widget.js?cId=e55c86dc87aaf85c9db67e32f926c3f"></script>
 
 <template>
 	<div class="bg-gray-700 text-white text-center min-h-screen flex flex-col">
 		<header class="container mx-auto p-6">
 			<h1 class="text-4xl font-bold">Plastic, People, Earth!</h1>
 		</header>
-
-		<!-- This site is converting visitors into subscribers and customers with https://respond.io --><script id="respondio__widget" src="https://cdn.respond.io/webchat/widget/widget.js?cId=e55c86dc87aaf85c9db67e32f926c3f"></script><!-- https://respond.io -->
 
 		<main class="container mx-auto p-6 flex-1">
 			<div v-if="choice === null" class="flex items-center justify-center -mx-6">
@@ -120,6 +122,10 @@ onMounted(() => {
 					<img src="./assets/worldwide.svg" alt="Scissors" />
 				</button>
 
+			</div>
+
+			<div class="iframe-container mt-12">
+				<iframe :src="iframeUrl" title="Iframe de Prueba" class="w-full h-96 border-0"></iframe>
 			</div>
 
 			<div v-else>
