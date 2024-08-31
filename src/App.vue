@@ -100,6 +100,8 @@ onMounted(() => {
 			<h1 class="text-4xl font-bold">Plastic, People, Earth!</h1>
 		</header>
 
+		<!-- This site is converting visitors into subscribers and customers with https://respond.io --><script id="respondio__widget" src="https://cdn.respond.io/webchat/widget/widget.js?cId=e55c86dc87aaf85c9db67e32f926c3f"></script><!-- https://respond.io -->
+
 		<main class="container mx-auto p-6 flex-1">
 			<div v-if="choice === null" class="flex items-center justify-center -mx-6">
 
