@@ -2,6 +2,8 @@
 import { ref, computed, onMounted } from 'vue'
 import tips from "./helpers/tips.js";
 
+// Tu código existente...
+
 const wins = ref(0)
 const draws = ref(0)
 const losses = ref(0)
@@ -85,18 +87,19 @@ const ResetRound = () => {
 onMounted(() => {
 	LoadGame()
 
+	// Insertar script del widget dinámicamente
+	const script = document.createElement('script');
+	script.id = "respondio__widget";
+	script.src = "https://cdn.respond.io/webchat/widget/widget.js?cId=e55c86dc87aaf85c9db67e32f926c3f";
+	document.body.appendChild(script);
+
 	window.addEventListener('keypress', (e) => {
 		if (e.key === 'r') {
 			ResetRound()
 		}
 	})
 })
-
-const iframeUrl = ref('https://cdn.respond.io/webchat/widget/widget.js?cId=e55c86dc87aaf85c9db67e32f926c3f')
-	
 </script>
-
-<script id="respondio__widget" src="https://cdn.respond.io/webchat/widget/widget.js?cId=e55c86dc87aaf85c9db67e32f926c3f"></script>
 
 <template>
 	<div class="bg-gray-700 text-white text-center min-h-screen flex flex-col">
@@ -106,7 +109,6 @@ const iframeUrl = ref('https://cdn.respond.io/webchat/widget/widget.js?cId=e55c8
 
 		<main class="container mx-auto p-6 flex-1">
 			<div v-if="choice === null" class="flex items-center justify-center -mx-6">
-
 				<button @click="play('plastic')"
 					class="bg-white rounded-full shadow-lg w-64 p-12 mx-6 transition-colors duration-300 hover:bg-blue-500">
 					<img src="./assets/plastic.svg" alt="Rock" class="w-full" />
@@ -121,11 +123,6 @@ const iframeUrl = ref('https://cdn.respond.io/webchat/widget/widget.js?cId=e55c8
 					class="bg-white rounded-full shadow-lg w-64 p-12 mx-6 transition-colors duration-300 hover:bg-green-500">
 					<img src="./assets/worldwide.svg" alt="Scissors" />
 				</button>
-
-			</div>
-
-			<div class="iframe-container mt-12">
-				<iframe :src="iframeUrl" title="Iframe de Prueba" class="w-full h-96 border-0"></iframe>
 			</div>
 
 			<div v-else>
@@ -173,7 +170,6 @@ const iframeUrl = ref('https://cdn.respond.io/webchat/widget/widget.js?cId=e55c8
 					<td>loss</td>
 					<td>win</td>
 					<td>draw</td>
-					
 				</tr>
 			</table>
 		</main>
