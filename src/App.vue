@@ -90,7 +90,7 @@ onMounted(() => {
 	// Insertar script del widget dinámicamente
 	const script = document.createElement('script');
 	script.id = "respondio__widget";
-	script.src = "https://cdn.respond.io/webchat/widget/widget.js?cId=e55c86dc87aaf85c9db67e32f926c3f";
+	script.src = "https://cdn.respond.io/webchat/widget/widget.js?cId=2c609201ccb10d354d06a5be3683fe0";
 	document.body.appendChild(script);
 
 	window.addEventListener('keypress', (e) => {
