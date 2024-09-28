@@ -173,6 +173,7 @@ onMounted(() => {
 				</tr>
 			</table>
 		</main>
+		<iframe height="430" width="350" src="https://bot.dialogflow.com/18880f17-1585-492f-a4fd-04a37f2f8e4e"></iframe>
 
 		<footer class="container mx-auto p-6">
 			<a href="https://www.vecteezy.com/free-vector/rock-paper-scissors-game">Rock Paper Scissors Game Vectors by
